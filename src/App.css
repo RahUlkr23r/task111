@@ -1,0 +1,341 @@
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 8px 28px;
+}
+
+.brand-mark {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: #13263a;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  color: #5c6f7b;
+  font-size: 0.98rem;
+}
+
+.hours-pill {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #edf7f5;
+  border: 1px solid #d7ece6;
+  color: #1c5d56;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 0.9fr);
+  gap: 28px;
+}
+
+.booking-panel,
+.summary-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #e7edf3;
+  border-radius: 24px;
+  box-shadow: 0 20px 48px rgba(15, 32, 48, 0.08);
+}
+
+.booking-panel {
+  padding: 28px 28px 30px;
+}
+
+.intro-block {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #2a7d73;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.intro-block h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.06em;
+  color: #11263b;
+}
+
+.supporting-copy {
+  max-width: 680px;
+  margin-top: 12px;
+  color: #526676;
+  font-size: 1.02rem;
+}
+
+.service-selector {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0 28px;
+}
+
+.service-option {
+  border: 1px solid #dfeaf1;
+  background: #f7fafb;
+  color: #203548;
+  border-radius: 16px;
+  padding: 16px 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.service-option:hover,
+.service-option:focus-visible {
+  border-color: #79c5bd;
+  box-shadow: 0 8px 18px rgba(34, 100, 92, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.service-option.active {
+  background: linear-gradient(180deg, rgba(37, 138, 124, 0.08), rgba(37, 138, 124, 0.02));
+  border-color: #2b8d84;
+  box-shadow: inset 0 0 0 1px rgba(43, 141, 132, 0.2);
+}
+
+.service-option span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.service-option strong {
+  color: #2d6b66;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.slot-grid-wrapper {
+  border: 1px solid #ebf0f3;
+  border-radius: 20px;
+  padding: 18px 18px 12px;
+  background: #fbfdff;
+}
+
+.grid-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.grid-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #162d42;
+}
+
+.grid-header span {
+  color: #617889;
+  font-size: 0.82rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.slot-button {
+  border: 1px solid #dfe8ee;
+  background: #ffffff;
+  color: #17324a;
+  border-radius: 12px;
+  min-height: 54px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.slot-button:hover:not(:disabled),
+.slot-button:focus-visible:not(:disabled) {
+  border-color: #7cd0c3;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.slot-button.available {
+  background: #eefaf7;
+  color: #1b4d48;
+}
+
+.slot-button.unavailable {
+  background: #f3f5f7;
+  border-color: #e4e7ea;
+  color: #9aa7af;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.slot-button.selected {
+  background: linear-gradient(180deg, #0d6a63, #0a5a55);
+  border-color: #0b5c57;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(16, 94, 85, 0.3);
+}
+
+.slot-button.range-highlight:not(.selected) {
+  background: rgba(42, 155, 138, 0.16);
+  border-color: rgba(42, 155, 138, 0.5);
+  color: #0d4a44;
+}
+
+.inline-message {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.96rem;
+}
+
+.inline-message.warning {
+  background: rgba(206, 145, 34, 0.12);
+  border: 1px solid rgba(206, 145, 34, 0.2);
+  color: #8d5c12;
+}
+
+.inline-message.success {
+  background: rgba(32, 124, 104, 0.12);
+  border: 1px solid rgba(32, 124, 104, 0.2);
+  color: #0d5c55;
+}
+
+.summary-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.summary-card {
+  padding: 26px 22px;
+}
+
+.summary-label {
+  margin: 0 0 12px;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5b7285;
+  font-weight: 700;
+}
+
+.summary-card h3 {
+  margin: 0;
+  color: #162d42;
+  font-size: 2rem;
+  letter-spacing: -0.06em;
+}
+
+.appointment-time {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1b5a53;
+}
+
+.duration-copy {
+  margin-top: 10px;
+  color: #4c6170;
+  font-size: 1rem;
+}
+
+.empty-state {
+  margin: 8px 0 0;
+  color: #657888;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.book-button,
+.reset-button {
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.book-button {
+  width: 100%;
+  background: linear-gradient(135deg, #0d6a63, #1f8579);
+  color: #ffffff;
+  min-height: 52px;
+}
+
+.book-button:disabled {
+  background: #dfe9ee;
+  color: #8398a5;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background: transparent;
+  color: #1d3d54;
+  min-height: 46px;
+  border: 1px solid #dfe9ef;
+}
+
+.book-button:hover:not(:disabled),
+.reset-button:hover,
+.book-button:focus-visible,
+.reset-button:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+}
+
+@media (max-width: 880px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .page-shell {
+    padding: 16px 14px 36px;
+  }
+
+  .booking-panel {
+    padding: 18px 16px 20px;
+  }
+
+  .service-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .slot-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
